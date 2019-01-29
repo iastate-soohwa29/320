@@ -1,0 +1,26 @@
+<script>
+
+a = 1
+b = 100
+
+guess = parseInt((a + b)/2)
+x = prompt("Is your number "+guess+"?")
+
+if (x == "yes") {
+  alert("I won!")
+} else {
+
+while(x !== "yes") {
+  
+  if (x == "<") {
+  guess = parseInt((a + guess) / 2)
+  x = prompt("Is it "+guess+"?")
+}
+  if (x == ">") {
+  guess = parseInt((guess + b) / 2)
+  x = prompt("Is your number "+guess+"?")
+}
+}
+}
+alert("I won!")
+</script>
