@@ -1,0 +1,40 @@
+<script>
+var shift = parseInt(prompt("Enter the shift that you want."))
+var text = prompt("Enter your text.")
+var encoded_text = []
+
+for (i = 0; i < text.length; i++) {
+  var x = text.charCodeAt(i)
+  if (x >= 65 && x <= 90) {		//for upper case letters
+	var begin = x - 65
+	var shifting = begin + shift
+    //alert(text.charAt(i))
+	if (shifting >= 26) { 		//length of characters
+		var y = (shifting % 26) + 65
+		encoded_text.push(String.fromCharCode(y))
+	} else if (shifting <= 0) {
+		var y = (shifting % 26) + 90
+		encoded_text.push(String.fromCharCode(y))
+	} else {
+		var characters = shifting + 65
+		encoded_text.push(String.fromCharCode(characters))
+	}
+  } else if (x >= 97 && x <= 122) {		//for lower case letters
+		var begin = x - 97
+		var z = begin + shift
+		if (z >= 26) {
+			var y = (z % 26) + 97
+			encoded_text.push(String.fromCharCode(y))
+		} else if (z <= 0) {
+			var y = (z % 26) + 122
+			encoded_text.push(String.fromCharCode(y))
+		} else {
+			var characters = z + 97
+			encoded_text.push(String.fromCharCode(characters))
+		}
+  } else {
+	  encoded_text.push(text.charAt(i))
+	  }
+  }
+  alert(encoded_text.join(""))		//join array elements into a string
+</script>
