@@ -1,0 +1,30 @@
+<script src="https://linguatorium.com/tools/static/320/tau.js"></script>
+<script src="https://linguatorium.com/tools/static/320/grammar.js"></script>	
+
+
+<script>
+  rule("S --> NP VP")
+  rule("NP --> DET N")
+  rule("VP --> V NP")
+  rule("N --> boy")		//these are the vocabulary
+  rule("N --> ball")
+  rule("V --> hit")
+  rule("DET --> the")
+  
+  //for intransitive verb
+
+  rule("S --> NP VP")
+  rule("NP --> DET N")
+  rule("DET --> the")
+  rule("N --> baby")
+  rule("N --> room")
+  rule("VP --> IT PP")
+  rule("V == VT || IT")
+  rule("IT --> sleeps")
+  rule("PP --> PREP ObjP")
+  rule("PREP --> in")
+  rule("ObjP --> NP")
+  
+  
+  run()					//run () will analyze the strings and run it
+</script>
