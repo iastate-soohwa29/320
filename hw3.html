@@ -1,0 +1,60 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+function process() {
+  str = document.getElementById("input").value
+  
+  consonants = [
+  "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z", 
+  "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"
+  ]
+  
+  vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+  
+  x = str.split(" ")
+  
+  for (i = 0; i < x.length; i++) {
+  
+	if (x[i] === "a") {
+		word_out = x[i + 1]
+		var words = word_out.charAt(0)
+		
+		  if (vowels.includes(words)) {
+			x[i] = "an"
+		  }
+	}
+	
+	if (x[i] === "an") {
+		word_out = x[i + 1]
+		var words = word_out.charAt(0)
+		
+		  if (consonants.includes(words)) {
+			x[i] = "a"
+			}
+	}
+	
+	if (x[i] === "an") {
+		word_out = x[i + 1]
+		var words = word_out.charAt(0)
+	
+			if (str.includes("university") == true) {
+			x[i] = "a"
+			}
+	}
+	
+	if (x[i] === "a") {
+		word_out = x[i + 1]
+		var words = word_out.charAt(0)
+	
+			if (str.includes("hour") == true) {
+			x[i] = "an"
+			}
+	}
+}
+  document.getElementById("output").value = x.join(" ")
+}
+
+</script>
