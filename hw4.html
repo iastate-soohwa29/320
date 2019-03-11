@@ -1,0 +1,110 @@
+<script>
+questions = {
+	on: [
+		"Halloween is celebrated in the United States ___ October 31.",
+		"The movie is based ___ a novel.",
+		"His laptop fell ___ the floor.",
+		"The girl worked ___ her project for a year.",
+		"The TV show is being shown ___ every Tuesday night.",
+		"The employees went ___ a strike for almost a month."],
+	
+	from: [
+		"My friends come ___ Sri Lanka.",
+		"The passage is translated ___ English to Japanese.",
+		"The professor came ___ Osaka last month.",
+		"The vase is made ___ a number of materials, such as ceramics, glass, and non-rusting metals.",
+		"They traveled ___ New York to Los Angeles."],
+	
+	to: [
+		"My brother walks with me ___ school everyday.",
+		"I walked ___ the end of the road.",
+		"This is our first trip ___ Japan to see the cherry blossoms.",
+		"The brothers went ___ the movies by themselves.",
+		"Her mother is going ___ the grocery store to buy her a sandwich."],
+	
+	about: [
+		"The students are worried ___ the schedule.",
+		"Nobody has heard ___ the rumor.",
+		"The book tells us fascinating stories ___ 'Arabian Nights'!",
+		"The story is ___ the fisherman and the demon.",
+		"The fisherman tells him a tale ___ the vizier and the sage."],
+	
+	at: [
+		"I told my friends to meet me ___ the bus station.",
+		"He is good ___ art and languages.",
+		"We have to arrive ___ the airport before 8 a.m.",
+		"My parents married ___ the age of 30.",
+		"She is surprised ___ the size of the dog." ]
+}
+
+prep_one = 0
+prep_two = 0
+prep_three = 0
+prep_four = 0
+prep_five = 0
+
+do {
+  one = questions.on[parseInt(Math.random() * questions.on.length)]
+  response_one = prompt(one)
+	if (response_one === "on") {
+		alert("Great Job!")
+		prep_one = prep_one + 1
+	}
+	else {
+		alert(one.replace("___", "on"))
+		prep_one = prep_one - 1
+	}
+} while (prep_one <= 1)
+
+do {
+  two = questions.from[parseInt(Math.random()*questions.from.length)]
+  response_two = prompt(two)
+	if (response_two === "from") {
+		alert("Correct!")
+		prep_two = prep_two + 1
+	}
+	else{
+		alert(two.replace("___", "from"))
+		prep_two = prep_two - 1
+	}
+} while (prep_two <= 1)
+ 
+do {
+  three = questions.to[parseInt(Math.random()*questions.to.length)]
+  response_three = prompt(three)
+	if (response_three === "to") {
+		alert("Great Job!")
+		prep_three = prep_three + 1
+	}
+	else {
+		alert(three.replace("___", "to"))
+		prep_three = prep_three - 1
+	}
+} while (prep_three <= 1)
+ 
+do {
+  four = questions.about[parseInt(Math.random()*questions.about.length)]
+  response_four = prompt(four)
+	if (response_four === "about") {
+		alert("Correct!")
+		prep_four = prep_four + 1
+	}
+	else {
+		alert(four.replace("___", "about"))
+		prep_four = prep_four - 1
+	}
+} while (prep_four <= 1)
+
+do {
+  five = questions.at[parseInt(Math.random()*questions.at.length)]
+  response_five = prompt(five)
+	if (response_five === "at") {
+		alert("Great Job!")
+		prep_five = prep_five + 1
+	}
+	else {
+		alert(five.replace("___", "at"))
+		prep_five = prep_five - 1
+	}
+} while (prep_five <= 1)
+</script>
