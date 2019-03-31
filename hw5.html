@@ -1,0 +1,5 @@
+<script>
+sentence = prompt("I will translate your words from English into Haigy Paigy!")
+x = sentence.replace(/([aeiouy])([aeiouy]*)/gi, "aig$1$2").replace(/([aeiouy])(e\b)/gi, "aig$1aig$2$3")
+alert(x)
+</script>
