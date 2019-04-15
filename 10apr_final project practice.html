@@ -1,0 +1,35 @@
+<script>
+rules = [
+  [ /S/, "V" ],
+  [ /S/, "VC" ], [ /S/,"CV" ], [ /S/, "GV" ],
+  [ /S/, "CCV" ], [ /S/, "CGV" ], [ /S/, "CVC" ],
+  [ /S/, "CCGV" ], [ /S/, "CCVC" ], [ /S/, "CGVC" ], [ /S/, "CCGVC" ],
+  [ /V/, "a" ],
+  [ /V/, "e"],
+  [ /V/, "i"],
+  [ /V/, "o"],
+  [ /V/, "ʉ"],
+  [ /V/, "u"],
+  [ /V/, "ɤ"],
+  [ /V/, "ɛ"],
+  [ /V/, "iu"],
+  [ /V/, "iɑ"],
+  [ /V/, "ɑi"],
+  [ /V/, "ɑo"],
+  [ /C/,"p"],[ /C/,"b"],[ /C/,"m"],[ /C/,"ɸ"],
+  [ /C/,"t"],[ /C/,"d"],[ /C/,"n"],
+  [ /C/,"s"],[ /C/,"z"],[ /C/,"ʃ"],[ /C/,"ʒ"],
+  [ /C/,"k"],[ /C/,"ɡ"],[ /C/,"ŋ"],[ /C/,"ʔ"],[ /C/,"h"],
+  [ /C/,"dʒ"],[ /C/,"dz"],[ /C/,"ts"],[ /C/,"tɕ"],
+  [ /G/,"ʋ"],[ /G/,"ɹ"],[ /G/,"w"],[ /G/,"l"],[ /G/,"ɰ"],[ /G/,"ʎ"]
+]
+  //put the var vowels and consonants here as an array
+
+word = "SSSS"
+
+while(/[A-Z]/.test(word)) {
+    r = rules[parseInt(rules.length * Math.random())]
+	word = word.replace(r[0], r[1])
+}
+
+</script>
