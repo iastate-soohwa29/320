@@ -1,21 +1,42 @@
 <script>
 //4 gricean maxims & dialog moves
+
+debate = [
+"It is one of the safest countries in the world!",
+"There are vending machines everywhere!",
+"Its public trnsportation is very convenient.",
+"You can drink alcohol in the public.",
+"Their convenience stores can do anything for you!",
+"The people recycle everything and cleanliness is highly practiced!",
+"There are many beautiful landscapes and historical landmarks!",
+"Their foods are delicious and healthy!"
+]
+
 response = prompt("Which country do you like the most in Asia?")
 	if (/\b(Japan)\b/i.test(response)) {
 		response = prompt("I like Japan too! It is the best country, isn't?")
-			if (/\b(yes|agree|absolutely)\b/i.test(response)){
+			if (/\b(y|yes|agree|absolutely)\b/i.test(response)){
 				alert("Great! Let's visit Japan together!")
 				} else {
-					response = prompt("What made you disagree with it?")
+					response = prompt("What made you disagree with it? Japan is nice!")
+						if (/\b(how|explain|what|like|know)\b/i.test(response)){
+							response = prompt[parseInt(Math.random()*debate.length)]
+						}
 					}
-	} else if (/\b(Korea|China|India|Taiwan|Malaysia|Vietnam|Thailand|Singapore|Hong Kong)\b/i.test(response)){
-		response = prompt("I like it too! But Japan is my favorite!")
+	} else if (/\b(Korea|China|Taiwan|Malaysia|Vietnam|Thailand|Singapore|Hong Kong)\b/i.test(response)){
+		response = prompt("I have heard about it, have you been there?")
 		} else {
-			response = prompt("Why do you like it?")
+			response = prompt("Can you tell me where it is?")
 			}
-
-
-
-//while(true) {
-//if (/\b()\b/i.test(x))}
+while (response != /\b(yes|agree|absolutely)\b/i.test(response)) {
+	chat = debate[parseInt(Math.random()*debate.length)]
+		if (/\b(bad|not|okay)\b/i.test(response)) {
+			response = prompt("But Japan is nice in many ways!")
+			} else {
+					response = prompt("Anyway, I would love to live in Japan in the future!")
+						if (/\b(okay|great|let's go|alright)\b/i.test(response)) {
+							alert("Alright, we'll talk later!")
+						}
+					}
+}
 </script>
