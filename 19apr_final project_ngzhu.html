@@ -1,0 +1,44 @@
+<html>
+<body>
+<h2>Word list</h2>
+
+<script>
+function generator(){
+	var list = new Array(500);
+	var rules = [
+		[/S/, "O"], [/S/, "ONCd"],
+		[/O/,"C"], [/O/, "CC"], [/O/, "CG"], [/O/, "CCG"],
+		[/N/, "V"], [/Cd/, "C"],
+	//S=syllable, O=onset, Cd=coda, N=nucleus	
+  /*[ /S/, "V" ],
+  [ /S/, "VC" ], [ /S/,"CV" ], [ /S/, "GV" ],
+  [ /S/, "CCV" ], [ /S/, "CGV" ], [ /S/, "CVC" ],
+  [ /S/, "CCGV" ], [ /S/, "CCVC" ], [ /S/, "CGVC" ], [ /S/, "CCGVC" ],*/
+	
+	[ /V/, "a" ], [ /V/, "e"], [ /V/, "i"], [ /V/, "o"], [ /V/, "ʉ"], [ /V/, "u"], [ /V/, "ɤ"], [ /V/, "ɛ"],
+	[ /V/, "iu"], [ /V/, "iɑ"], [ /V/, "ɑi"], [ /V/, "ɑo"],
+  
+	[ /C/,"p"],[ /C/,"b"],[ /C/,"m"],[ /C/,"ɸ"],
+	[ /C/,"t"],[ /C/,"d"],[ /C/,"n"],
+	[ /C/,"s"],[ /C/,"z"],[ /C/,"ʃ"],[ /C/,"ʒ"],
+	[ /C/,"k"],[ /C/,"ɡ"],[ /C/,"ŋ"],[ /C/,"ʔ"],[ /C/,"h"],
+	[ /C/,"dʒ"],[ /C/,"dz"],[ /C/,"ts"],[ /C/,"tɕ"],
+	
+	[ /G/,"ʋ"],[ /G/,"ɹ"],[ /G/,"w"],[ /G/,"l"],[ /G/,"ɰ"],[ /G/,"ʎ"]
+];
+
+for (i = 0; i<list.length; i++) {
+	var word = "S";
+		while(/[A-Z]/.test(word)) {
+		r = rules[parseInt(Math.random() * rules.length)]
+		word = word.replace(r[0], r[1])
+		};
+		list[i] = "\n" +word+ "\n";
+	}
+	document.write(list);
+};
+generator();
+
+</script>
+</body>
+</html>
