@@ -1,0 +1,21 @@
+<script>
+//4 gricean maxims & dialog moves
+response = prompt("Which country do you like the most in Asia?")
+	if (/\b(Japan)\b/i.test(response)) {
+		response = prompt("I like Japan too! It is the best country, isn't?")
+			if (/\b(yes|agree|absolutely)\b/i.test(response)){
+				alert("Great! Let's visit Japan together!")
+				} else {
+					response = prompt("What made you disagree with it?")
+					}
+	} else if (/\b(Korea|China|India|Taiwan|Malaysia|Vietnam|Thailand|Singapore|Hong Kong)\b/i.test(response)){
+		response = prompt("I like it too! But Japan is my favorite!")
+		} else {
+			response = prompt("Why do you like it?")
+			}
+
+
+
+//while(true) {
+//if (/\b()\b/i.test(x))}
+</script>
